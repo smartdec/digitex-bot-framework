@@ -6,11 +6,9 @@ The exact APIs used to initialize a bot has not been fleshed out yet.
 For now, you do it like this:
 
 ```python
-import digitex_engine_client
 import digitex_bot_framework
 
-client = digitex_engine_client.WsClient(host=..., token=...)
-bot = digitex_bot_framework.Bot(client)
+bot = digitex_bot_framework.Bot(host=..., token=...)
 ```
 
 Then, add one or more markets you're going to trade on:
@@ -19,7 +17,6 @@ Then, add one or more markets you're going to trade on:
 market = digitex_bot_framework.Market.BTC_USD
 await bot.add_market(market)
 ```
-
 
 That's it, from there on you can start your trading.
 
